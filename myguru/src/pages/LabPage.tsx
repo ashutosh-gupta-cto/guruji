@@ -2,20 +2,21 @@ import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 
+import ConfirmQuiz from '../components/learning/ConfirmQuiz';
+import LearnPanel from '../components/learning/LearnPanel';
 import StepProgress, { type LearningPhase } from '../components/learning/StepProgress';
 import TryStepPanel from '../components/learning/TryStepPanel';
+import { getLessonContent } from '../content';
 import { getLessonByModule } from '../data/tracks';
-import { markModuleComplete } from '../lib/progress';
 import { getLabModule } from '../modules/lab-registry';
 
 export default function LabPage() {
   const { module: moduleId } = useParams<{ module: string }>();
   const [phase, setPhase] = useState<LearningPhase>('learn');
-  const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
-  const [confirmed, setConfirmed] = useState(false);
 
   const lab = moduleId ? getLabModule(moduleId) : undefined;
   const context = moduleId ? getLessonByModule(moduleId) : undefined;
+  const lessonContent = moduleId ? getLessonContent(moduleId) : undefined;
 
   if (!moduleId || !lab) {
     return (
@@ -33,13 +34,6 @@ export default function LabPage() {
   const lesson = context?.lesson;
   const track = context?.track;
 
-  const handleConfirm = () => {
-    if (selectedAnswer === 0) {
-      markModuleComplete(moduleId);
-      setConfirmed(true);
-    }
-  };
-
   return (
     <>
       <header className="page-header">
@@ -49,33 +43,39 @@ export default function LabPage() {
             {track.subtitle}
           </Link>
         )}
-        <h1 className="page-header__title">{lesson?.title ?? lab.title}</h1>
+        <h1 className="page-header__title">
+          {lessonContent?.title ?? lesson?.title ?? lab.title}
+        </h1>
         {lesson && <p className="page-header__desc">{lesson.description}</p>}
       </header>
 
       <StepProgress current={phase} />
 
-      {phase === 'learn' && (
-        <div className="learn-panel">
-          <h2>Overview</h2>
-          <p>
-            {lesson?.description ??
-              'This lesson introduces a core CS concept through guided explanation and hands-on practice.'}
-          </p>
-          <p>
-            Read through the key ideas, then move to the Try phase where you will interact
-            with a live visualization. Finish with Confirm to check your understanding.
-          </p>
-          <button
-            type="button"
-            className="btn btn--primary"
-            onClick={() => setPhase('try')}
-            style={{ marginTop: '0.5rem' }}
-          >
-            Start Try phase
-          </button>
-        </div>
-      )}
+      {phase === 'learn' &&
+        (lessonContent ? (
+          <LearnPanel content={lessonContent} onNext={() => setPhase('try')} />
+        ) : (
+          <div className="learn-panel">
+            <h2>Overview</h2>
+            <p>
+              {lesson?.description ??
+                'This lesson introduces a core CS concept through guided explanation and hands-on practice.'}
+            </p>
+            <p>
+              Reading material for this module is coming soon. Move to the Try phase to
+              interact with the live visualization, then Confirm to check your understanding.
+            </p>
+            <div className="learn-panel__footer">
+              <button
+                type="button"
+                className="btn btn--primary"
+                onClick={() => setPhase('try')}
+              >
+                Start Try phase
+              </button>
+            </div>
+          </div>
+        ))}
 
       {phase === 'try' && (
         <TryStepPanel
@@ -87,35 +87,21 @@ export default function LabPage() {
         </TryStepPanel>
       )}
 
-      {phase === 'confirm' && (
-        <div className="confirm-panel">
-          <h2>Check your understanding</h2>
-          <p>
-            What is the main takeaway from this lesson? (Placeholder question — agents
-            will replace with module-specific quizzes.)
-          </p>
-          <div className="confirm-panel__options">
-            {[
-              `I understand the core concept behind ${lab.title}.`,
-              'I need to review this topic again.',
-              'This topic is unrelated to the lab.',
-            ].map((option, idx) => (
-              <button
-                key={option}
-                type="button"
-                className={`confirm-option${selectedAnswer === idx ? ' confirm-option--selected' : ''}`}
-                onClick={() => setSelectedAnswer(idx)}
-              >
-                {option}
-              </button>
-            ))}
-          </div>
-          {confirmed ? (
-            <p style={{ color: 'var(--success)', fontWeight: 600 }}>
-              Lesson marked complete! Progress saved.
+      {phase === 'confirm' &&
+        (lessonContent && lessonContent.quiz.length > 0 ? (
+          <ConfirmQuiz
+            moduleId={moduleId}
+            quiz={lessonContent.quiz}
+            onBack={() => setPhase('try')}
+          />
+        ) : (
+          <div className="confirm-panel">
+            <h2>Check your understanding</h2>
+            <p>
+              Quiz content for this module is coming soon. Review the Try phase and return
+              when lesson material is available.
             </p>
-          ) : (
-            <div style={{ display: 'flex', gap: '0.75rem' }}>
+            <div className="confirm-quiz__actions">
               <button
                 type="button"
                 className="btn btn--secondary"
@@ -123,18 +109,9 @@ export default function LabPage() {
               >
                 Back to Try
               </button>
-              <button
-                type="button"
-                className="btn btn--primary"
-                onClick={handleConfirm}
-                disabled={selectedAnswer === null}
-              >
-                Submit answer
-              </button>
             </div>
-          )}
-        </div>
-      )}
+          </div>
+        ))}
     </>
   );
 }
