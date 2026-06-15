@@ -1,0 +1,305 @@
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/dsa/TheAlgoFlow__AlgoFlow'...
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/dsa/ChazWyllie__data-structure-visualizer'...
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/dsa/ttang1024__interactive-dsa'...
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/dsa/blackphoenix42__AlgoLens'...
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/dsa/midudev__alg0.dev'...
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/dsa/TamimEhsan__AlgorithmVisualizer'...
+OK    TheAlgoFlow/AlgoFlow
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/dsa/algorithm-visualizer__algorithm-visualizer'...
+OK    ChazWyllie/data-structure-visualizer
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/dsa/algorithm-visualizer__algorithms'...
+OK    midudev/alg0.dev
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/dsa/alienx5499__SortVision'...
+OK    blackphoenix42/AlgoLens
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/dsa/PCfVW__d-Heap-priority-queue'...
+OK    algorithm-visualizer/algorithm-visualizer
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/dsa/thomas-basham__algo-visualizer'...
+OK    algorithm-visualizer/algorithms
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/dsa/JasonFengGit__Visualizer'...
+OK    ttang1024/interactive-dsa
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/dsa/Sethuram52001__Path-Finding-Visualizer'...
+OK    alienx5499/SortVision
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/dsa/ayush-tiwari57__Algorithm-Visualizer'...
+OK    thomas-basham/algo-visualizer
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/dsa/ScottT2-spec__grid-pathfinder'...
+OK    Sethuram52001/Path-Finding-Visualizer
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/dsa/pronzzz__algo-viz'...
+OK    TamimEhsan/AlgorithmVisualizer
+OK    PCfVW/d-Heap-priority-queue
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/dsa/easyhard__dpv'...
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/dsa/cytoscape__cytoscape.js'...
+OK    ayush-tiwari57/Algorithm-Visualizer
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/dsa/hasinajy__dijkstra-js-network-simulation'...
+OK    JasonFengGit/Visualizer
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/dsa/sadanandpai__algo-visualizers'...
+OK    ScottT2-spec/grid-pathfinder
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/dsa/VoxHash__algovista-next'...
+OK    pronzzz/algo-viz
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/dsa/AlaminPu1007__algorithm-visualizer'...
+OK    hasinajy/dijkstra-js-network-simulation
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/dsa/baeharam__Pathfinding-Visualizer'...
+OK    VoxHash/algovista-next
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/dsa/baterson__pathfinding-visualizer'...
+OK    sadanandpai/algo-visualizers
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/dsa/arnabuchiha__Algorithm-Visualizer'...
+OK    AlaminPu1007/algorithm-visualizer
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/dsa/AbdallahHemdan__Pathfinding-Visualizer'...
+OK    baeharam/Pathfinding-Visualizer
+OK    easyhard/dpv
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/dsa/paudefclasspy__data-structures'...
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/dsa/joshiayush__wizard'...
+OK    baterson/pathfinding-visualizer
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/dsa/tariqs26__algorithm-visualizer'...
+OK    arnabuchiha/Algorithm-Visualizer
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/dsa/RhythmPahwa14__AlgoVisualizer'...
+OK    joshiayush/wizard
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/dsa/iamujj15__sorting-algorithms-visualizer'...
+OK    paudefclasspy/data-structures
+OK    tariqs26/algorithm-visualizer
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/dsa/mlsdpk__path-finding-visualizer'...
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/dsa/dgalles__visualization'...
+OK    dgalles/visualization
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/PatrickKoss__database-internals-visualized'...
+OK    mlsdpk/path-finding-visualizer
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/idsulik__kafka-concepts-visualizer'...
+OK    RhythmPahwa14/AlgoVisualizer
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/ionmx__consistent-hashing-simulator'...
+OK    ionmx/consistent-hashing-simulator
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/Kimosabey__ring-route'...
+OK    idsulik/kafka-concepts-visualizer
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/pronzzz__sysarch-interactive'...
+OK    Kimosabey/ring-route
+OK    pronzzz/sysarch-interactive
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/konraddzbik__architecture-diagram-skill'...
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/ahdadou__System-Design-Handbook'...
+OK    konraddzbik/architecture-diagram-skill
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/vijaygupta18__system-design-simulator'...
+OK    ahdadou/System-Design-Handbook
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/satya00089__diagrammatic'...
+OK    PatrickKoss/database-internals-visualized
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/mallahyari__system-design-visualizer'...
+OK    satya00089/diagrammatic
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/likec4__likec4'...
+OK    vijaygupta18/system-design-simulator
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/xyflow__xyflow'...
+OK    mallahyari/system-design-visualizer
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/excalidraw__excalidraw'...
+OK    xyflow/xyflow
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/excalidraw__mermaid-to-excalidraw'...
+OK    cytoscape/cytoscape.js
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/bogdancstrike__kafka-workers-visualizer'...
+OK    bogdancstrike/kafka-workers-visualizer
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/muralibasani__streamlens'...
+OK    muralibasani/streamlens
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/hamidlabs__distsim'...
+OK    hamidlabs/distsim
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/mongodb-developer__replica-monitor'...
+OK    excalidraw/mermaid-to-excalidraw
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/jvorndran__RAG-Visualizer'...
+OK    mongodb-developer/replica-monitor
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/itamittech__animatedsystemdesign'...
+OK    itamittech/animatedsystemdesign
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/ahmedkhaleel2004__gitdiagram'...
+OK    ahmedkhaleel2004/gitdiagram
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/CodeBoarding__CodeBoarding'...
+OK    CodeBoarding/CodeBoarding
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/saurabh-oss__archilens'...
+OK    saurabh-oss/archilens
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/marcbrooker__stability-sim'...
+OK    marcbrooker/stability-sim
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/arjun-sa__simulacra'...
+OK    arjun-sa/simulacra
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/AsyncFlow-Sim__AsyncFlow'...
+OK    AbdallahHemdan/Pathfinding-Visualizer
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/jepsen-io__maelstrom'...
+OK    AsyncFlow-Sim/AsyncFlow
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/Sumit6258__System-Design'...
+OK    jepsen-io/maelstrom
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/Aarush-Verulkar-USC__RaftKV'...
+OK    Sumit6258/System-Design
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/AarjavPatni__raft-visualization'...
+OK    Aarush-Verulkar-USC/RaftKV
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/jivimberg__paxos-playground'...
+OK    AarjavPatni/raft-visualization
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/ongardie__raftscope'...
+OK    jivimberg/paxos-playground
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/anubhav100rao__rafty'...
+OK    ongardie/raftscope
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/dice-dydakt__capdemo'...
+OK    jvorndran/RAG-Visualizer
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/emichael__dslabs'...
+OK    anubhav100rao/rafty
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/DistributedClocks__shiviz'...
+OK    dice-dydakt/capdemo
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/g-obare13__sysdesign'...
+OK    emichael/dslabs
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/ozers__system-design-canvas'...
+OK    ozers/system-design-canvas
+OK    DistributedClocks/shiviz
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/bacharSalleh__archik'...
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/ravikanchikare__diagram-engine'...
+OK    g-obare13/sysdesign
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/arach__arc'...
+Updating files:  48% (3525/7289)Updating files:  49% (3572/7289)Updating files:  50% (3645/7289)Updating files:  51% (3718/7289)Updating files:  52% (3791/7289)Updating files:  53% (3864/7289)Updating files:  54% (3937/7289)Updating files:  55% (4009/7289)Updating files:  56% (4082/7289)Updating files:  57% (4155/7289)Updating files:  58% (4228/7289)Updating files:  59% (4301/7289)Updating files:  60% (4374/7289)Updating files:  61% (4447/7289)Updating files:  62% (4520/7289)Updating files:  63% (4593/7289)Updating files:  64% (4665/7289)Updating files:  65% (4738/7289)Updating files:  66% (4811/7289)Updating files:  67% (4884/7289)Updating files:  68% (4957/7289)Updating files:  69% (5030/7289)Updating files:  70% (5103/7289)Updating files:  71% (5176/7289)Updating files:  72% (5249/7289)Updating files:  73% (5321/7289)Updating files:  74% (5394/7289)Updating files:  75% (5467/7289)Updating files:  76% (5540/7289)Updating files:  77% (5613/7289)Updating files:  78% (5686/7289)Updating files:  79% (5759/7289)Updating files:  80% (5832/7289)Updating files:  81% (5905/7289)Updating files:  82% (5977/7289)Updating files:  83% (6050/7289)Updating files:  84% (6123/7289)Updating files:  85% (6196/7289)Updating files:  86% (6269/7289)Updating files:  87% (6342/7289)Updating files:  88% (6415/7289)Updating files:  89% (6488/7289)OK    ravikanchikare/diagram-engine
+Updating files:  90% (6561/7289)Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/1tsadityaraj__System-Design-Visualizer'...
+Updating files:  91% (6633/7289)Updating files:  91% (6656/7289)Updating files:  92% (6706/7289)Updating files:  93% (6779/7289)Updating files:  94% (6852/7289)Updating files:  95% (6925/7289)Updating files:  96% (6998/7289)Updating files:  97% (7071/7289)Updating files:  98% (7144/7289)Updating files:  99% (7217/7289)Updating files: 100% (7289/7289)Updating files: 100% (7289/7289), done.
+OK    likec4/likec4
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/honzaap__Systemizer'...
+OK    honzaap/Systemizer
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/panyam__sdl'...
+OK    1tsadityaraj/System-Design-Visualizer
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/bipulhf__system-visualizer'...
+OK    bipulhf/system-visualizer
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/swark-io__swark'...
+OK    arach/arc
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/pdulapalli__consistent-hashing-node-simulator'...
+OK    panyam/sdl
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/system-design/basilysf1709__chsim'...
+OK    basilysf1709/chsim
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/ai-ml/poloclub__transformer-explainer'...
+OK    excalidraw/excalidraw
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/ai-ml/apple__embedding-atlas'...
+OK    swark-io/swark
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/ai-ml/jessevig__BertViz'...
+OK    apple/embedding-atlas
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/ai-ml/catherinesyeh__attention-viz'...
+OK    jessevig/BertViz
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/ai-ml/gabrielchua__RAGxplorer'...
+OK    iamujj15/sorting-algorithms-visualizer
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/ai-ml/VIS-SUSTech__RAGTrace'...
+OK    gabrielchua/RAGxplorer
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/ai-ml/Thymezzz__RAGExplorer'...
+OK    Thymezzz/RAGExplorer
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/ai-ml/krxthx__revelio'...
+OK    bacharSalleh/archik
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/ai-ml/renumics__renumics-rag'...
+OK    VIS-SUSTech/RAGTrace
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/ai-ml/mcikalmerdeka__rag-pipeline-visualizer'...
+OK    pdulapalli/consistent-hashing-node-simulator
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/ai-ml/jvorndran__unravel'...
+OK    mcikalmerdeka/rag-pipeline-visualizer
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/ai-ml/glaforge__embedding-gemma-semantic-search'...
+OK    glaforge/embedding-gemma-semantic-search
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/ai-ml/ferhatatagun__agent-replay'...
+OK    ferhatatagun/agent-replay
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/ai-ml/ferhatatagun__tool-lab'...
+OK    ferhatatagun/tool-lab
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/ai-ml/JeGwan__agent-anatomy'...
+OK    JeGwan/agent-anatomy
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/ai-ml/jayparikh__agentviz'...
+OK    jayparikh/agentviz
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/ai-ml/microsoft__graphrag'...
+OK    renumics/renumics-rag
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/ai-ml/charisal__GraphRAG-Demo'...
+OK    charisal/GraphRAG-Demo
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/ai-ml/bentoml__llm-inference-handbook'...
+OK    krxthx/revelio
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/ai-ml/devadigapratham__attention-rollout'...
+OK    jvorndran/unravel
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/ai-ml/Team-Lasso__bert-attention-visualizer'...
+OK    devadigapratham/attention-rollout
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/ai-ml/poloclub__cnn-explainer'...
+OK    Team-Lasso/bert-attention-visualizer
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/ai-ml/poloclub__diffusion-explainer'...
+OK    microsoft/graphrag
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/ai-ml/tensorflow__playground'...
+OK    tensorflow/playground
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/ai-ml/dlmastery__neural-network-playground'...
+OK    dlmastery/neural-network-playground
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/ai-ml/okdalto__GPT-Visualizer'...
+OK    okdalto/GPT-Visualizer
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/ai-ml/VizuaraAI__dna-of-a-transformer'...
+OK    VizuaraAI/dna-of-a-transformer
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/ai-ml/skyliulu__LLM-Infra-Explorer'...
+OK    bentoml/llm-inference-handbook
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/ai-ml/helblazer811__ManimML'...
+OK    poloclub/cnn-explainer
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/ai-ml/gavinkhung__machine-learning-visualized'...
+OK    gavinkhung/machine-learning-visualized
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/ai-ml/sap156__RAGflow'...
+OK    sap156/RAGflow
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/ai-ml/KHemanthRaju__RAG_Visualizer'...
+OK    skyliulu/LLM-Infra-Explorer
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/ai-ml/DarkStarStrix__Nexa_Visualize'...
+OK    DarkStarStrix/Nexa_Visualize
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/ai-ml/SammmE__oscar'...
+OK    SammmE/oscar
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/ai-ml/jacobgil__vit-explain'...
+OK    jacobgil/vit-explain
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/cs-fundamentals/Ayushkumar418__OS_SIMULATOR-Web_App'...
+OK    KHemanthRaju/RAG_Visualizer
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/cs-fundamentals/AmirShakibafar__OS-Visualizer'...
+OK    Ayushkumar418/OS_SIMULATOR-Web_App
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/cs-fundamentals/MUMEi-28__VirtualMemorySimulator'...
+OK    AmirShakibafar/OS-Visualizer
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/cs-fundamentals/Vaiditya2207__OKernel'...
+OK    Vaiditya2207/OKernel
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/cs-fundamentals/Mo7ammedd__SimuKernel'...
+OK    Mo7ammedd/SimuKernel
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/cs-fundamentals/jsg0000__dns-trace'...
+OK    jsg0000/dns-trace
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/cs-fundamentals/zym9863__3D-Protocol-Inspector'...
+OK    zym9863/3D-Protocol-Inspector
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/cs-fundamentals/Shripad735__comp-network'...
+OK    Shripad735/comp-network
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/cs-fundamentals/Jayan1463__netscope'...
+OK    Jayan1463/netscope
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/cs-fundamentals/G-Amar__Network-Routing-Visualized'...
+OK    G-Amar/Network-Routing-Visualized
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/cs-fundamentals/Mwpereira__Routing-Algorithms-Visualizer'...
+OK    Mwpereira/Routing-Algorithms-Visualizer
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/cs-fundamentals/Yusux__BPlusTreeVisualizer'...
+OK    Yusux/BPlusTreeVisualizer
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/cs-fundamentals/4iKZ__MySQL-InnoDB-B-Tree-'...
+OK    4iKZ/MySQL-InnoDB-B-Tree-
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/cs-fundamentals/mcandiri__LiveSQL'...
+OK    mcandiri/LiveSQL
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/cs-fundamentals/danielace1__compiler-visualizer'...
+OK    danielace1/compiler-visualizer
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/cs-fundamentals/RJ-Hossan__CompileX'...
+OK    RJ-Hossan/CompileX
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/cs-fundamentals/michaelmillar__desugar'...
+OK    michaelmillar/desugar
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/cs-fundamentals/akashlevy__Vizpiler'...
+OK    akashlevy/Vizpiler
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/cs-fundamentals/mortbopet__Ripes'...
+OK    MUMEi-28/VirtualMemorySimulator
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/cs-fundamentals/cvut__QtMips'...
+OK    cvut/QtMips
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/cs-fundamentals/solst-ice__bin-hex-dec'...
+OK    solst-ice/bin-hex-dec
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/cs-fundamentals/Mr-vtx__binary-lab'...
+OK    Mr-vtx/binary-lab
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/cs-fundamentals/HansTydecks__binary-decimal-visualizer'...
+OK    mortbopet/Ripes
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/cs-fundamentals/Royal-lobster__stateforge'...
+OK    Royal-lobster/stateforge
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/cs-fundamentals/izuzak__noam'...
+OK    HansTydecks/binary-decimal-visualizer
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/cs-fundamentals/AmirHossein812002__Regex2FA'...
+OK    izuzak/noam
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/cs-fundamentals/psychic-cyber__crypto-visualizer'...
+OK    AmirHossein812002/Regex2FA
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/cs-fundamentals/systemslibrarian__cipher-museum'...
+OK    psychic-cyber/crypto-visualizer
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/cs-fundamentals/powergr__cipherflow-visualizer'...
+OK    powergr/cipherflow-visualizer
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/cs-fundamentals/pcottle__learnGitBranching'...
+OK    pcottle/learnGitBranching
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/cs-fundamentals/onlywei__explain-git-with-d3'...
+OK    onlywei/explain-git-with-d3
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/cs-fundamentals/git-learning-game__oh-my-git'...
+OK    git-learning-game/oh-my-git
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/cs-fundamentals/MartinDevillers__omicron'...
+OK    MartinDevillers/omicron
+Cloning into '/Users/promtflow-oprag/Documents/projects/guruji/repos/cs-fundamentals/wadekarg__DS-Algo-Playground'...
+OK    wadekarg/DS-Algo-Playground
+OK    systemslibrarian/cipher-museum
+Updating files:  66% (199/301)Updating files:  67% (202/301)Updating files:  68% (205/301)Updating files:  69% (208/301)Updating files:  70% (211/301)Updating files:  71% (214/301)Updating files:  72% (217/301)Updating files:  73% (220/301)Updating files:  74% (223/301)Updating files:  75% (226/301)Updating files:  76% (229/301)Updating files:  77% (232/301)Updating files:  78% (235/301)Updating files:  79% (238/301)Updating files:  80% (241/301)Updating files:  81% (244/301)Updating files:  82% (247/301)Updating files:  83% (250/301)Updating files:  84% (253/301)Updating files:  85% (256/301)Updating files:  86% (259/301)Updating files:  87% (262/301)Updating files:  88% (265/301)Updating files:  89% (268/301)Updating files:  90% (271/301)Updating files:  91% (274/301)Updating files:  92% (277/301)Updating files:  93% (280/301)Updating files:  94% (283/301)Updating files:  95% (286/301)Updating files:  96% (289/301)Updating files:  97% (292/301)Updating files:  98% (295/301)Updating files:  99% (298/301)Updating files: 100% (301/301)Updating files: 100% (301/301), done.
+OK    helblazer811/ManimML
+Updating files:  11% (4230/37993)Updating files:  12% (4560/37993)Updating files:  13% (4940/37993)Updating files:  14% (5320/37993)Updating files:  15% (5699/37993)Updating files:  16% (6079/37993)Updating files:  16% (6328/37993)Updating files:  17% (6459/37993)Updating files:  18% (6839/37993)Updating files:  18% (7187/37993)Updating files:  19% (7219/37993)Updating files:  20% (7599/37993)Updating files:  20% (7852/37993)Updating files:  21% (7979/37993)Updating files:  22% (8359/37993)Updating files:  23% (8739/37993)Updating files:  24% (9119/37993)Updating files:  25% (9499/37993)Updating files:  25% (9500/37993)Updating files:  26% (9879/37993)Updating files:  27% (10259/37993)Updating files:  28% (10639/37993)Updating files:  29% (11018/37993)Updating files:  30% (11398/37993)Updating files:  31% (11778/37993)Updating files:  32% (12158/37993)Updating files:  33% (12538/37993)Updating files:  34% (12918/37993)Updating files:  35% (13298/37993)Updating files:  35% (13323/37993)Updating files:  36% (13678/37993)Updating files:  37% (14058/37993)Updating files:  38% (14438/37993)Updating files:  39% (14818/37993)Updating files:  40% (15198/37993)Updating files:  41% (15578/37993)Updating files:  41% (15783/37993)Updating files:  42% (15958/37993)Updating files:  43% (16337/37993)Updating files:  44% (16717/37993)Updating files:  45% (17097/37993)Updating files:  46% (17477/37993)Updating files:  47% (17857/37993)Updating files:  48% (18237/37993)Updating files:  48% (18239/37993)Updating files:  49% (18617/37993)Updating files:  50% (18997/37993)Updating files:  51% (19377/37993)Updating files:  52% (19757/37993)Updating files:  53% (20137/37993)Updating files:  54% (20517/37993)Updating files:  55% (20897/37993)Updating files:  55% (21115/37993)Updating files:  56% (21277/37993)Updating files:  57% (21657/37993)Updating files:  58% (22036/37993)Updating files:  59% (22416/37993)Updating files:  60% (22796/37993)Updating files:  61% (23176/37993)Updating files:  62% (23556/37993)Updating files:  62% (23635/37993)Updating files:  63% (23936/37993)Updating files:  64% (24316/37993)Updating files:  65% (24696/37993)Updating files:  66% (25076/37993)Updating files:  66% (25297/37993)Updating files:  67% (25456/37993)Updating files:  68% (25836/37993)Updating files:  69% (26216/37993)Updating files:  70% (26596/37993)Updating files:  71% (26976/37993)Updating files:  72% (27355/37993)Updating files:  73% (27735/37993)Updating files:  74% (28115/37993)Updating files:  75% (28495/37993)Updating files:  76% (28875/37993)Updating files:  76% (29234/37993)Updating files:  77% (29255/37993)Updating files:  78% (29635/37993)Updating files:  79% (30015/37993)Updating files:  80% (30395/37993)Updating files:  81% (30775/37993)Updating files:  82% (31155/37993)Updating files:  83% (31535/37993)Updating files:  84% (31915/37993)Updating files:  85% (32295/37993)Updating files:  86% (32674/37993)Updating files:  87% (33054/37993)Updating files:  88% (33434/37993)Updating files:  89% (33814/37993)Updating files:  90% (34194/37993)Updating files:  91% (34574/37993)Updating files:  92% (34954/37993)Updating files:  93% (35334/37993)Updating files:  94% (35714/37993)Updating files:  95% (36094/37993)Updating files:  95% (36330/37993)Updating files:  96% (36474/37993)Updating files:  97% (36854/37993)Updating files:  98% (37234/37993)Updating files:  99% (37614/37993)Updating files: 100% (37993/37993)Updating files: 100% (37993/37993), done.
+OK    poloclub/diffusion-explainer
+Updating files:  70% (118/167)Updating files:  71% (119/167)Updating files:  72% (121/167)Updating files:  73% (122/167)Updating files:  74% (124/167)Updating files:  75% (126/167)Updating files:  76% (127/167)Updating files:  77% (129/167)Updating files:  78% (131/167)Updating files:  79% (132/167)Updating files:  80% (134/167)Updating files:  81% (136/167)Updating files:  82% (137/167)Updating files:  83% (139/167)Updating files:  84% (141/167)Updating files:  85% (142/167)Updating files:  86% (144/167)Updating files:  87% (146/167)Updating files:  88% (147/167)Updating files:  89% (149/167)Updating files:  90% (151/167)Updating files:  91% (152/167)Updating files:  91% (153/167)Updating files:  92% (154/167)Updating files:  93% (156/167)Updating files:  94% (157/167)Updating files:  95% (159/167)Updating files:  96% (161/167)Updating files:  97% (162/167)Updating files:  98% (164/167)Updating files:  99% (166/167)Updating files: 100% (167/167)Updating files: 100% (167/167), done.
+OK    poloclub/transformer-explainer
+Updating files:  27% (134/479)Updating files:  28% (135/479)Updating files:  29% (139/479)Updating files:  30% (144/479)Updating files:  31% (149/479)Updating files:  32% (154/479)Updating files:  33% (159/479)Updating files:  34% (163/479)Updating files:  35% (168/479)Updating files:  36% (173/479)Updating files:  37% (178/479)Updating files:  37% (180/479)Updating files:  38% (183/479)Updating files:  39% (187/479)Updating files:  40% (192/479)Updating files:  41% (197/479)Updating files:  42% (202/479)Updating files:  42% (204/479)Updating files:  43% (206/479)Updating files:  44% (211/479)Updating files:  45% (216/479)Updating files:  46% (221/479)Updating files:  46% (223/479)Updating files:  47% (226/479)Updating files:  48% (230/479)Updating files:  49% (235/479)Updating files:  50% (240/479)Updating files:  50% (243/479)Updating files:  51% (245/479)Updating files:  52% (250/479)Updating files:  53% (254/479)Updating files:  54% (259/479)Updating files:  54% (262/479)Updating files:  55% (264/479)Updating files:  56% (269/479)Updating files:  57% (274/479)Updating files:  58% (278/479)Updating files:  59% (283/479)Updating files:  60% (288/479)Updating files:  61% (293/479)Updating files:  62% (297/479)Updating files:  62% (298/479)Updating files:  63% (302/479)Updating files:  64% (307/479)Updating files:  65% (312/479)Updating files:  66% (317/479)Updating files:  67% (321/479)Updating files:  68% (326/479)Updating files:  69% (331/479)Updating files:  70% (336/479)Updating files:  71% (341/479)Updating files:  72% (345/479)Updating files:  73% (350/479)Updating files:  74% (355/479)Updating files:  75% (360/479)Updating files:  76% (365/479)Updating files:  77% (369/479)Updating files:  78% (374/479)Updating files:  79% (379/479)Updating files:  80% (384/479)Updating files:  81% (388/479)Updating files:  82% (393/479)Updating files:  83% (398/479)Updating files:  84% (403/479)Updating files:  85% (408/479)Updating files:  86% (412/479)Updating files:  87% (417/479)Updating files:  88% (422/479)Updating files:  89% (427/479)Updating files:  90% (432/479)Updating files:  91% (436/479)Updating files:  92% (441/479)Updating files:  93% (446/479)Updating files:  94% (451/479)Updating files:  95% (456/479)Updating files:  96% (460/479)Updating files:  97% (465/479)Updating files:  98% (470/479)Updating files:  99% (475/479)Updating files: 100% (479/479)Updating files: 100% (479/479), done.
+OK    catherinesyeh/attention-viz
