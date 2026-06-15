@@ -1,0 +1,95 @@
+.replication-viz {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  overflow: hidden;
+  color: #e2e8f0;
+}
+
+.replication-viz__header {
+  padding: 1rem 1.25rem 0.5rem;
+}
+
+.replication-viz__header h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.125rem;
+}
+
+.replication-viz__header p {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: #94a3b8;
+}
+
+.replication-viz__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0 1.25rem 0.75rem;
+  align-items: center;
+}
+
+.replication-viz__btn {
+  padding: 0.375rem 0.75rem;
+  background: #334155;
+  color: #f8fafc;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.replication-viz__btn:hover {
+  background: #475569;
+}
+
+.replication-viz__btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.replication-viz__frame-info {
+  margin-left: auto;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.replication-viz__canvas-wrap {
+  background: #111827;
+  padding: 0.5rem;
+}
+
+.replication-viz__canvas {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  height: auto;
+}
+
+.replication-viz__annotation {
+  padding: 0.75rem 1.25rem;
+  font-size: 0.8125rem;
+  background: #1e293b;
+  border-top: 1px solid #334155;
+  line-height: 1.5;
+}
+
+.replication-viz__annotation--stale {
+  color: #fca5a5;
+}
+
+.replication-viz__config {
+  display: flex;
+  gap: 1rem;
+  padding: 0 1.25rem 0.75rem;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.replication-viz__config label {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}

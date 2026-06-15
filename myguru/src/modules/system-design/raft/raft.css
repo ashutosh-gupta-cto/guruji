@@ -1,0 +1,103 @@
+.raft-sim {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  overflow: hidden;
+  color: #e2e8f0;
+}
+
+.raft-sim__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: #1e293b;
+  border-bottom: 1px solid #334155;
+  align-items: center;
+}
+
+.raft-sim__btn {
+  padding: 0.375rem 0.75rem;
+  background: #334155;
+  color: #f8fafc;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.raft-sim__btn:hover {
+  background: #475569;
+}
+
+.raft-sim__btn--primary {
+  background: #2563eb;
+}
+
+.raft-sim__btn--primary:hover {
+  background: #1d4ed8;
+}
+
+.raft-sim__speed {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.raft-sim__speed input {
+  width: 80px;
+}
+
+.raft-sim__canvas-wrap {
+  position: relative;
+  background: #1a1a1a;
+}
+
+.raft-sim__canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.raft-sim__stats {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background: rgba(0, 0, 0, 0.65);
+  padding: 0.625rem 0.875rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  pointer-events: none;
+}
+
+.raft-sim__footer {
+  padding: 0.75rem 1rem;
+  font-size: 0.8125rem;
+  color: #94a3b8;
+  border-top: 1px solid #334155;
+}
+
+.raft-sim__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.raft-sim__legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.6875rem;
+}
+
+.raft-sim__legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}

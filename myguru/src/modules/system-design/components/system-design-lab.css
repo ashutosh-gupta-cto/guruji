@@ -1,0 +1,68 @@
+.sdl-lab {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.sdl-header h1 {
+  margin: 0 0 0.25rem;
+  font-size: 1.75rem;
+  color: #f1f5f9;
+}
+
+.sdl-header p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.sdl-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.sdl-tab {
+  padding: 0.5rem 1rem;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  background: #1e293b;
+  color: #cbd5e1;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.sdl-tab:hover {
+  background: #334155;
+}
+
+.sdl-tab-active {
+  background: #6366f1;
+  border-color: #6366f1;
+  color: white;
+}
+
+.sdl-tab-desc {
+  margin: 0.75rem 0;
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.sdl-panel {
+  margin-top: 0.5rem;
+}
+
+.sdl-attribution {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #334155;
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.sdl-attribution a {
+  color: #818cf8;
+}

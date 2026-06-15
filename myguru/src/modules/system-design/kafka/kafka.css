@@ -1,0 +1,195 @@
+.kafka-viz {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 1.25rem;
+  color: #e2e8f0;
+}
+
+.kafka-viz__header {
+  margin-bottom: 1rem;
+}
+
+.kafka-viz__header h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.125rem;
+  color: #f8fafc;
+}
+
+.kafka-viz__header p {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: #94a3b8;
+}
+
+.kafka-viz__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.kafka-viz__btn {
+  padding: 0.5rem 0.875rem;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.kafka-viz__btn:hover {
+  background: #1d4ed8;
+}
+
+.kafka-viz__btn--secondary {
+  background: #334155;
+}
+
+.kafka-viz__btn--secondary:hover {
+  background: #475569;
+}
+
+.kafka-viz__btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.kafka-viz__system {
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.kafka-viz__topic,
+.kafka-viz__consumer-group {
+  flex: 1;
+  border-radius: 8px;
+  padding: 0.875rem;
+}
+
+.kafka-viz__topic {
+  border: 2px solid #38bdf8;
+  background: rgba(56, 189, 248, 0.06);
+}
+
+.kafka-viz__consumer-group {
+  border: 2px solid #34d399;
+  background: rgba(52, 211, 153, 0.06);
+}
+
+.kafka-viz__topic h3,
+.kafka-viz__consumer-group h3 {
+  margin: 0 0 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.kafka-viz__partition {
+  background: rgba(56, 189, 248, 0.12);
+  margin: 0.5rem 0;
+  padding: 0.625rem;
+  border-radius: 6px;
+  min-height: 2.75rem;
+  position: relative;
+}
+
+.kafka-viz__partition-label {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: #7dd3fc;
+  margin-bottom: 0.375rem;
+}
+
+.kafka-viz__partition--rebalancing {
+  animation: kafka-pulse 0.6s ease-in-out 2;
+  box-shadow: 0 0 0 2px #fbbf24;
+}
+
+.kafka-viz__consumer {
+  background: rgba(52, 211, 153, 0.12);
+  margin: 0.5rem 0;
+  padding: 0.625rem;
+  border-radius: 6px;
+  min-height: 2.75rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.kafka-viz__consumer--rebalancing {
+  animation: kafka-pulse 0.6s ease-in-out 2;
+  box-shadow: 0 0 0 2px #fbbf24;
+}
+
+.kafka-viz__consumer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #6ee7b7;
+  margin-bottom: 0.375rem;
+}
+
+.kafka-viz__assignment {
+  font-size: 0.625rem;
+  font-weight: 500;
+  color: #94a3b8;
+}
+
+.kafka-viz__messages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.kafka-viz__message {
+  display: inline-block;
+  background: #2563eb;
+  color: #fff;
+  padding: 0.125rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+}
+
+.kafka-viz__message--moving {
+  position: fixed;
+  z-index: 100;
+  pointer-events: none;
+  transition: transform 0.5s ease;
+}
+
+.kafka-viz__explanation {
+  padding: 0.875rem;
+  background: #1e293b;
+  border-radius: 6px;
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  color: #cbd5e1;
+}
+
+.kafka-viz__explanation h3 {
+  margin: 0 0 0.5rem;
+  font-size: 0.875rem;
+  color: #f8fafc;
+}
+
+@keyframes kafka-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 4px rgba(251, 191, 36, 0.6);
+  }
+}
+
+@media (max-width: 640px) {
+  .kafka-viz__system {
+    flex-direction: column;
+  }
+}

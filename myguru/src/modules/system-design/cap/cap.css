@@ -1,0 +1,160 @@
+.cap-viz {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 1.25rem;
+  color: #e2e8f0;
+}
+
+.cap-viz__header h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.125rem;
+}
+
+.cap-viz__header p {
+  margin: 0 0 1rem;
+  font-size: 0.8125rem;
+  color: #94a3b8;
+}
+
+.cap-viz__mode-toggle {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.cap-viz__mode-btn {
+  flex: 1;
+  padding: 0.625rem;
+  border: 2px solid #334155;
+  border-radius: 8px;
+  background: #1e293b;
+  color: #cbd5e1;
+  cursor: pointer;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.cap-viz__mode-btn--active.cp {
+  border-color: #6366f1;
+  background: rgba(99, 102, 241, 0.15);
+  color: #a5b4fc;
+}
+
+.cap-viz__mode-btn--active.ap {
+  border-color: #10b981;
+  background: rgba(16, 185, 129, 0.15);
+  color: #6ee7b7;
+}
+
+.cap-viz__cluster {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+}
+
+.cap-viz__partition-line {
+  width: 100%;
+  text-align: center;
+  color: #f87171;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.25rem;
+  border-top: 2px dashed #f87171;
+  border-bottom: 2px dashed #f87171;
+  background: rgba(248, 113, 113, 0.08);
+}
+
+.cap-viz__node {
+  width: 100px;
+  padding: 0.875rem;
+  border-radius: 8px;
+  text-align: center;
+  border: 2px solid #475569;
+  background: #1e293b;
+}
+
+.cap-viz__node--isolated {
+  border-color: #f87171;
+  opacity: 0.85;
+}
+
+.cap-viz__node--majority {
+  border-color: #34d399;
+}
+
+.cap-viz__node-id {
+  font-weight: 700;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.cap-viz__node-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+.cap-viz__node-status {
+  font-size: 0.625rem;
+  margin-top: 0.375rem;
+  color: #94a3b8;
+}
+
+.cap-viz__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.cap-viz__btn {
+  padding: 0.5rem 0.875rem;
+  background: #334155;
+  color: #f8fafc;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.cap-viz__btn:hover {
+  background: #475569;
+}
+
+.cap-viz__btn--danger {
+  background: #b91c1c;
+}
+
+.cap-viz__btn--danger:hover {
+  background: #991b1b;
+}
+
+.cap-viz__btn--success {
+  background: #059669;
+}
+
+.cap-viz__log {
+  background: #1e293b;
+  border-radius: 6px;
+  padding: 0.75rem;
+  font-size: 0.75rem;
+  font-family: ui-monospace, monospace;
+  max-height: 140px;
+  overflow-y: auto;
+  line-height: 1.6;
+  color: #cbd5e1;
+}
+
+.cap-viz__log-entry--error {
+  color: #fca5a5;
+}
+
+.cap-viz__log-entry--ok {
+  color: #6ee7b7;
+}

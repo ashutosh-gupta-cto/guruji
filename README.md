@@ -26,6 +26,16 @@ chmod +x clone-all.sh
 
 Repos clone into `repos/<category>/<owner>__<repo>/` with shallow history (`--depth 1`).
 
+## myguru — integrated learning app
+
+The [`myguru/`](myguru/) subfolder is a React app that ports the best visualizers into a unified **Learn → Try → Confirm** experience:
+
+```bash
+cd myguru && npm install && npm run dev
+```
+
+See [myguru/README.md](myguru/README.md) for module mapping and architecture.
+
 ## Stats
 
 | Category | Repos |
