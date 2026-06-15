@@ -1,6 +1,6 @@
 # myguru
 
-Interactive CS learning platform — **Learn → Try → Confirm** with **37 labs** ported from the [guruji](../) open-source visualizer collection.
+Interactive CS learning platform — **Learn → Try → Confirm** with **52 labs** ported from the [guruji](../) open-source visualizer collection.
 
 ## Run locally
 
@@ -16,10 +16,10 @@ Open http://localhost:5173
 
 | Track | Lessons | Highlights |
 |-------|--------:|------------|
-| **DSA** | 10 | Sorting, binary search, heap, BST, hash table, topo sort, A*, DP table, Dijkstra |
-| **System Design** | 8 | Load balancer particles, caching, Kafka, Raft, replication, CAP, consistent hashing, architecture canvas |
-| **AI/ML** | 9 | Transformer & CNN embeds, neural playground, RAG pipeline/trace, agent replay, semantic search, KV cache |
-| **CS Fundamentals** | 9 | Binary/hex, B+ tree, git (merge/rebase/cherry-pick), CPU scheduling, DNS, routing, crypto, automata, compilers |
+| **DSA** | 16 | + quick sort, stack/queue, linked list, trie, MST, Dijkstra, dedicated BFS |
+| **System Design** | 11 | + Paxos, stability/retry storms, interview simulator |
+| **AI/ML** | 11 | + diffusion explainer, embedding atlas, GraphRAG hybrid, agent-replay fix |
+| **CS Fundamentals** | 13 | + git game, CPU arch (Ripes), cipher museum, OS memory sim |
 
 ## Source repos (ported)
 

@@ -238,6 +238,84 @@ const attention: LessonContent = {
 
 const diffusion: LessonContent = {
   moduleId: 'diffusion',
+  title: 'Diffusion Models',
+  sections: [
+    {
+      heading: 'From noise to images',
+      body:
+        'Diffusion models learn to generate data by reversing a gradual noising process. During training, Gaussian noise is added step-by-step until the signal is destroyed; the model learns to predict and remove that noise conditioned on a prompt.',
+      bullets: [
+        'Forward process: x₀ → x₁ → … → x_T (pure noise).',
+        'Reverse process: a neural network denoises x_T back toward x₀.',
+        'Text-to-image models condition denoising on an embedding of the prompt.',
+      ],
+    },
+    {
+      heading: 'The U-Net backbone',
+      body:
+        'Most image diffusion models use a U-Net that operates in latent space (smaller than pixel space for efficiency). Skip connections preserve spatial detail while timestep embeddings tell the network how much noise remains.',
+      code: `// Simplified denoising step at timestep t
+noise_pred = unet(x_t, t, text_embedding)
+x_{t-1} = scheduler.step(x_t, noise_pred, t)`,
+      tip: 'Latent diffusion (Stable Diffusion) runs the U-Net on a VAE-compressed representation — faster and cheaper than pixel-space diffusion.',
+    },
+    {
+      heading: 'Guidance and sampling',
+      body:
+        'Classifier-free guidance amplifies the influence of the text prompt by contrasting conditional and unconditional noise predictions. Samplers (DDPM, DDIM, DPM++) trade quality for speed by skipping timesteps.',
+      bullets: [
+        'Higher guidance → stronger prompt adherence, sometimes oversaturated output.',
+        'Fewer steps → faster generation, possible quality loss.',
+        'Seed controls randomness — same seed + prompt ≈ reproducible image.',
+      ],
+    },
+    {
+      heading: 'Interview talking points',
+      body:
+        'Contrast diffusion with GANs (adversarial training) and autoregressive image models (pixel-by-pixel). Mention training stability, inference cost (many forward passes), and extensions: ControlNet, inpainting, video diffusion.',
+    },
+  ],
+  keyTakeaways: [
+    'Diffusion models generate by iteratively denoising random noise, guided by a text or class condition.',
+    'A U-Net predicts noise at each timestep; latent diffusion keeps compute tractable.',
+    'Guidance and sampler choice trade prompt fidelity, quality, and inference speed.',
+  ],
+  sourceAttribution: [
+    {
+      repo: 'poloclub/diffusion-explainer',
+      url: 'https://github.com/poloclub/diffusion-explainer',
+    },
+  ],
+  quiz: [
+    {
+      question: 'What does the diffusion model predict at each denoising step?',
+      options: [
+        'The final class label directly',
+        'The noise (or score) to remove from the current noisy sample',
+        'The next token in a sequence',
+        'The gradient of the loss function',
+      ],
+      correctIndex: 1,
+      explanation:
+        'The network learns to estimate noise (or the score function) so the scheduler can step toward a clean sample.',
+    },
+    {
+      question: 'Why do latent diffusion models operate in VAE-compressed space?',
+      options: [
+        'To eliminate the need for a text encoder',
+        'To reduce spatial dimensions and make multi-step inference computationally feasible',
+        'To avoid using attention layers',
+        'To train without GPUs',
+      ],
+      correctIndex: 1,
+      explanation:
+        'Compressing images to a lower-dimensional latent space cuts memory and compute per denoising step.',
+    },
+  ],
+};
+
+const agentReplay: LessonContent = {
+  moduleId: 'agent-replay',
   title: 'Agent Trace Replay',
   sections: [
     {
@@ -623,6 +701,93 @@ const ragTrace: LessonContent = {
   ],
 };
 
+const graphragHybrid: LessonContent = {
+  moduleId: 'graphrag-hybrid',
+  title: 'GraphRAG & Hybrid Retrieval',
+  sections: [
+    {
+      heading: 'Why graphs complement vectors',
+      body:
+        'Vector search finds semantically similar text chunks but misses explicit relationships — "who mentored whom," "who collaborated with whom." Knowledge graphs store typed triples (entity → relationship → entity) that multi-hop traversal can follow.',
+      bullets: [
+        'Vector retrieval: best for topical overlap and paraphrased questions.',
+        'Graph retrieval: best for relationship and lineage questions.',
+        'Hybrid: combine both contexts before LLM generation.',
+      ],
+      tip: 'In interviews, cite Microsoft GraphRAG and Neo4j+Qdrant patterns as production architectures.',
+    },
+    {
+      heading: 'The GraphRAG indexing pipeline',
+      body:
+        'A typical pipeline extracts entities and relationships from documents (LLM or NER), loads triples into a graph DB (Neo4j), embeds text chunks into a vector store (Qdrant/Pinecone), then queries both at answer time.',
+      code: `entities, rels = extract_triples(doc)
+neo4j.merge(entities, rels)
+qdrant.upsert(embed(chunk(doc)))
+
+# Query time
+chunks = qdrant.search(embed(question), k=5)
+paths = neo4j.traverse(extract_entities(question), hops=2)
+answer = llm(question, chunks + paths)`,
+    },
+    {
+      heading: 'Three retrieval modes',
+      body:
+        'Comparing modes on the same question reveals trade-offs. Vector-only may find topical paragraphs but miss explicit edges. Graph-only surfaces relationships but may lack narrative detail. Hybrid merges chunk text with relationship chains for richer answers.',
+      bullets: [
+        'Vector only — "Which scientists worked on nuclear fission?"',
+        'Graph only — "How are Marie Curie and Niels Bohr connected?"',
+        'Hybrid — complex questions needing both facts and relationships.',
+      ],
+    },
+    {
+      heading: 'When hybrid wins',
+      body:
+        'Hybrid retrieval shines when questions need entity disambiguation plus surrounding context — e.g., influence chains where vector chunks provide historical narrative and graph paths provide typed INFLUENCED_BY edges. Cost: two index lookups and larger LLM context.',
+    },
+  ],
+  keyTakeaways: [
+    'Vector search handles semantic similarity; knowledge graphs capture typed relationships.',
+    'GraphRAG indexes both triples and embeddings, then queries both at answer time.',
+    'Hybrid retrieval combines chunk text with graph paths for relationship-heavy questions.',
+  ],
+  sourceAttribution: [
+    {
+      repo: 'charisal/GraphRAG-Demo',
+      url: 'https://github.com/charisal/GraphRAG-Demo',
+    },
+    {
+      repo: 'microsoft/graphrag',
+      url: 'https://github.com/microsoft/graphrag',
+    },
+  ],
+  quiz: [
+    {
+      question: 'Which question type is graph retrieval best suited for?',
+      options: [
+        '"Summarize this paragraph"',
+        '"How are two scientists connected through their work?"',
+        '"What is the cosine similarity formula?"',
+        '"Tokenize this sentence"',
+      ],
+      correctIndex: 1,
+      explanation:
+        'Multi-hop graph traversal excels at relationship and connection queries between named entities.',
+    },
+    {
+      question: 'What does hybrid GraphRAG retrieval combine?',
+      options: [
+        'BM25 and regex search only',
+        'Vector-retrieved text chunks and graph-traversed entity relationships',
+        'Training data and test data',
+        'Encoder and decoder weights',
+      ],
+      correctIndex: 1,
+      explanation:
+        'Hybrid mode merges semantic chunks from the vector store with relationship paths from the knowledge graph.',
+    },
+  ],
+};
+
 const kvCache: LessonContent = {
   moduleId: 'kv-cache',
   title: 'LLM Inference & KV Cache',
@@ -708,10 +873,12 @@ export const aiMlLessons: Record<string, LessonContent> = {
   'gradient-descent': gradientDescent,
   attention,
   diffusion,
+  'agent-replay': agentReplay,
   transformer,
   'neural-playground': neuralPlayground,
   'cnn-explainer': cnnExplainer,
   'rag-trace': ragTrace,
+  'graphrag-hybrid': graphragHybrid,
   'kv-cache': kvCache,
 };
 

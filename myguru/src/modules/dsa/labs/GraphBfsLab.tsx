@@ -1,5 +1,5 @@
-import { GraphVisualizerPage } from '../components/GraphVisualizerPage';
+import { BfsPage } from '../components/BfsPage';
 
 export default function GraphBfsLab() {
-  return <GraphVisualizerPage />;
+  return <BfsPage />;
 }

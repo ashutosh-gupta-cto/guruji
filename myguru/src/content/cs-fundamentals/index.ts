@@ -687,6 +687,287 @@ const automata: LessonContent = {
   ],
 };
 
+const gitGame: LessonContent = {
+  moduleId: 'git-game',
+  title: 'Git Branching Game',
+  sections: [
+    {
+      heading: 'Why learn git visually',
+      body:
+        'Git commands manipulate an invisible graph of commits. A visual sandbox lets you see exactly what branch, merge, and rebase do before you run them on a real repository.',
+      bullets: [
+        'Each commit is a node; parent pointers form the history DAG.',
+        'Branches are labels pointing at commits — cheap to create and move.',
+        'Mistakes are recoverable when you understand the graph.',
+      ],
+    },
+    {
+      heading: 'Core commands',
+      body:
+        'Start with commit and checkout, then branch to fork work. Merge combines histories; rebase replays commits for a linear log. Cherry-pick copies individual commits across branches.',
+      code: `git commit -am "save work"
+git branch feature
+git checkout feature
+git merge main`,
+      tip: 'Draw the graph when explaining merge vs rebase — interviewers reward visual reasoning.',
+    },
+    {
+      heading: 'Interactive levels',
+      body:
+        'Learn Git Branching walks you from basics through remote tracking, detached HEAD, and advanced rebasing. Complete each level by typing the correct git commands in the embedded terminal.',
+    },
+  ],
+  keyTakeaways: [
+    'Git history is a DAG — visualize it before running destructive commands.',
+    'Merge preserves parallel history; rebase linearizes by replaying commits.',
+    'Practice in a sandbox builds muscle memory for real team workflows.',
+  ],
+  sourceAttribution: [
+    {
+      repo: 'pcottle/learnGitBranching',
+      url: 'https://github.com/pcottle/learnGitBranching',
+    },
+  ],
+  quiz: [
+    {
+      question: 'What happens during a fast-forward merge?',
+      options: [
+        'A merge commit with two parents is created',
+        'The branch pointer simply moves forward — no divergent commits',
+        'All commits are squashed into one',
+        'The remote repository is reset',
+      ],
+      correctIndex: 1,
+      explanation:
+        'Fast-forward occurs when the target branch has no unique commits — it just advances the pointer.',
+    },
+    {
+      question: 'Why is rebase risky on shared public branches?',
+      options: [
+        'It deletes all branches',
+        'It rewrites commit SHAs, breaking collaborators\' local copies',
+        'It only works offline',
+        'It cannot be undone',
+      ],
+      correctIndex: 1,
+      explanation:
+        'Rebase creates new commits; teammates referencing old SHAs face painful divergence.',
+    },
+  ],
+};
+
+const cpuArch: LessonContent = {
+  moduleId: 'cpu-arch',
+  title: 'CPU Architecture',
+  sections: [
+    {
+      heading: 'From assembly to execution',
+      body:
+        'A CPU fetches instructions from memory, decodes them, and executes operations on registers. RISC-V is a clean, open instruction set ideal for learning how processors actually work.',
+      bullets: [
+        'Registers hold operands and results — much faster than memory.',
+        'Load/store architecture: only explicit loads and stores touch memory.',
+        'The program counter (PC) tracks the next instruction address.',
+      ],
+    },
+    {
+      heading: 'Pipeline stages',
+      body:
+        'Modern CPUs overlap fetch, decode, execute, memory access, and write-back. Hazards occur when an instruction depends on a result not yet available — the pipeline stalls or forwards data.',
+      tip: 'Interview classic: explain why a load followed by a dependent add causes a stall.',
+    },
+    {
+      heading: 'Memory hierarchy',
+      body:
+        'Registers → L1 cache → L2/L3 → RAM → disk. Each level trades speed for capacity. Cache hits avoid slow memory accesses; misses trigger line fills from lower levels.',
+      bullets: [
+        'Spatial locality: nearby addresses likely accessed soon.',
+        'Temporal locality: recently used data likely reused.',
+        'Cache lines (typically 64 B) amortize fetch cost.',
+      ],
+    },
+    {
+      heading: 'Hands-on with Ripes',
+      body:
+        'Ripes simulates a RISC-V core in the browser. Load sample programs, single-step instructions, and inspect register and memory state after each cycle.',
+    },
+  ],
+  keyTakeaways: [
+    'CPUs execute fetch-decode-execute cycles on registers and memory.',
+    'Pipelines overlap stages but stall on data and control hazards.',
+    'Caches exploit locality to bridge the CPU–memory speed gap.',
+  ],
+  sourceAttribution: [
+    {
+      repo: 'mortbopet/Ripes',
+      url: 'https://github.com/mortbopet/Ripes',
+    },
+  ],
+  quiz: [
+    {
+      question: 'In a load/store architecture, where do arithmetic operations typically occur?',
+      options: ['Directly in main memory', 'In CPU registers', 'On the disk', 'In the network stack'],
+      correctIndex: 1,
+      explanation:
+        'RISC-style CPUs operate on register operands; memory is accessed only via explicit load/store instructions.',
+    },
+    {
+      question: 'What is temporal locality?',
+      options: [
+        'Nearby memory addresses are accessed together',
+        'Recently accessed data is likely to be accessed again soon',
+        'Instructions execute in parallel',
+        'Cache lines are always 64 bytes',
+      ],
+      correctIndex: 1,
+      explanation:
+        'Temporal locality means recently used data tends to be reused — the principle behind LRU cache replacement.',
+    },
+  ],
+};
+
+const cipherMuseum: LessonContent = {
+  moduleId: 'cipher-museum',
+  title: 'Cipher Museum',
+  sections: [
+    {
+      heading: 'Classical cryptography',
+      body:
+        'Before computers, ciphers hid messages by transforming letters. Understanding these historical schemes builds intuition for modern encryption — substitution, transposition, and polyalphabetic techniques.',
+      bullets: [
+        'Substitution replaces each symbol with another.',
+        'Transposition rearranges symbol order without changing the alphabet.',
+        'Polyalphabetic ciphers use multiple alphabets keyed to position.',
+      ],
+    },
+    {
+      heading: 'Caesar and monoalphabetic ciphers',
+      body:
+        'The Caesar cipher shifts each letter by a fixed amount. Frequency analysis breaks any monoalphabetic scheme because letter distributions survive unchanged — E is still the most common letter, just mapped to a different symbol.',
+    },
+    {
+      heading: 'Vigenère and Playfair',
+      body:
+        'Vigenère uses a repeating keyword to pick different Caesar shifts per letter — defeating simple frequency analysis until Kasiski and Friedman cracked it. Playfair encrypts digraphs on a 5×5 keyed grid, further obscuring letter frequencies.',
+      code: `Vigenère: plain[i] + key[i mod keylen] mod 26
+Playfair: encrypt pairs (bigrams) via grid rules`,
+    },
+    {
+      heading: 'Enigma and the machine age',
+      body:
+        'The Enigma machine applied polyalphabetic substitution via rotating wired rotors and a reflector — billions of settings, yet cryptanalysts at Bletchley Park broke it by exploiting structural weaknesses (no letter encrypts to itself, predictable rotor stepping).',
+      tip: 'Modern AES is nothing like Enigma — but the lesson stands: security through obscurity fails.',
+    },
+  ],
+  keyTakeaways: [
+    'Substitution and transposition are the two fundamental classical techniques.',
+    'Monoalphabetic ciphers fall to frequency analysis; polyalphabetic ciphers resist it longer.',
+    'Mechanical ciphers like Enigma added complexity but still had exploitable structure.',
+  ],
+  sourceAttribution: [
+    {
+      repo: 'systemslibrarian/cipher-museum',
+      url: 'https://github.com/systemslibrarian/cipher-museum',
+    },
+  ],
+  quiz: [
+    {
+      question: 'Why does frequency analysis break the Caesar cipher?',
+      options: [
+        'It uses too many keys',
+        'Letter frequency patterns are preserved — only shifted',
+        'It requires a computer to decrypt',
+        'It only works on numbers',
+      ],
+      correctIndex: 1,
+      explanation:
+        'Caesar is monoalphabetic: each plaintext letter always maps to the same ciphertext letter, so E\'s frequency survives.',
+    },
+    {
+      question: 'What makes Vigenère harder to break than Caesar?',
+      options: [
+        'It uses a longer alphabet',
+        'Different letters use different substitution alphabets based on the key',
+        'It encrypts numbers instead of letters',
+        'It requires two keys',
+      ],
+      correctIndex: 1,
+      explanation:
+        'Vigenère is polyalphabetic — the shift varies with each key letter, flattening single-letter frequency patterns.',
+    },
+  ],
+};
+
+const osSimulator: LessonContent = {
+  moduleId: 'os-simulator',
+  title: 'OS Memory Simulator',
+  sections: [
+    {
+      heading: 'Virtual memory and paging',
+      body:
+        'Each process sees a large virtual address space. The OS maps virtual pages to physical frames via page tables. When a process references an address, the MMU splits it into page number and offset.',
+      code: `page_number = virtual_address / page_size
+offset      = virtual_address % page_size`,
+      bullets: [
+        'Page size is typically 4 KB on x86/Linux.',
+        'Page tables can be multi-level to save space.',
+        'TLB caches recent translations for speed.',
+      ],
+    },
+    {
+      heading: 'Page faults',
+      body:
+        'If the referenced page is not in a physical frame, a page fault occurs. The OS selects a victim frame (if all are full), evicts its page, loads the needed page, and resumes the process.',
+      tip: 'Page fault count is the key metric when comparing replacement algorithms.',
+    },
+    {
+      heading: 'Replacement algorithms',
+      body:
+        'FIFO evicts the oldest resident page. LRU evicts the least recently used. OPT (Belady\'s optimal) evicts the page used farthest in the future — optimal but requires foresight.',
+      bullets: [
+        'FIFO is simple but suffers Belady\'s anomaly (more frames can mean more faults).',
+        'LRU approximates good locality with higher implementation cost.',
+        'OPT sets the theoretical lower bound for fault count.',
+      ],
+    },
+    {
+      heading: 'Simulating paging',
+      body:
+        'Use the address translation tab to split virtual addresses, then run FIFO, LRU, and OPT on a reference string to compare page fault counts side by side.',
+    },
+  ],
+  keyTakeaways: [
+    'Virtual addresses decompose into page number + offset via the MMU.',
+    'Page faults trigger eviction and loading when a page is not in memory.',
+    'FIFO, LRU, and OPT trade implementation simplicity against fault rate.',
+  ],
+  sourceAttribution: [
+    {
+      repo: 'Ayushkumar418/OS_SIMULATOR-Web_App',
+      url: 'https://github.com/Ayushkumar418/OS_SIMULATOR-Web_App',
+    },
+    {
+      repo: 'MUMEi-28/VirtualMemorySimulator',
+      url: 'https://github.com/MUMEi-28/VirtualMemorySimulator',
+    },
+  ],
+  quiz: [
+    {
+      question: 'For virtual address 4096 with 1024-byte pages, what is the page number?',
+      options: ['0', '1', '4', '4096'],
+      correctIndex: 2,
+      explanation: '4096 / 1024 = 4 — page number 4 with offset 0.',
+    },
+    {
+      question: 'Which page replacement algorithm is optimal but impractical?',
+      options: ['FIFO', 'LRU', 'OPT (Optimal)', 'Random'],
+      correctIndex: 2,
+      explanation:
+        'OPT evicts the page used farthest in the future — optimal but requires knowledge of future references.',
+    },
+  ],
+};
+
 export const csFundamentalsLessons: Record<string, LessonContent> = {
   'memory-model': memoryModel,
   concurrency,
@@ -697,6 +978,10 @@ export const csFundamentalsLessons: Record<string, LessonContent> = {
   'os-scheduler': osScheduler,
   routing,
   automata,
+  'git-game': gitGame,
+  'cpu-arch': cpuArch,
+  'cipher-museum': cipherMuseum,
+  'os-simulator': osSimulator,
 };
 
 export default csFundamentalsLessons;

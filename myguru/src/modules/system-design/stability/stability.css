@@ -1,0 +1,162 @@
+.stability-sim {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  overflow: hidden;
+  color: #e2e8f0;
+}
+
+.stability-sim__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: #1e293b;
+  border-bottom: 1px solid #334155;
+  align-items: center;
+}
+
+.stability-sim__btn {
+  padding: 0.375rem 0.75rem;
+  background: #334155;
+  color: #f8fafc;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.stability-sim__btn:hover {
+  background: #475569;
+}
+
+.stability-sim__btn--primary {
+  background: #dc2626;
+}
+
+.stability-sim__btn--primary:hover {
+  background: #b91c1c;
+}
+
+.stability-sim__time {
+  margin-left: auto;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-variant-numeric: tabular-nums;
+}
+
+.stability-sim__body {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 0;
+}
+
+@media (max-width: 768px) {
+  .stability-sim__body {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stability-sim__topology {
+  padding: 1rem;
+  border-right: 1px solid #334155;
+}
+
+.stability-sim__diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+}
+
+.stability-sim__node {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 2px solid #475569;
+  background: #1e293b;
+  min-width: 120px;
+  text-align: center;
+}
+
+.stability-sim__node--crashed {
+  border-color: #dc2626;
+  background: rgba(220, 38, 38, 0.15);
+  opacity: 0.7;
+}
+
+.stability-sim__node--hot {
+  border-color: #f59e0b;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.4);
+}
+
+.stability-sim__arrow {
+  color: #64748b;
+  font-size: 1.25rem;
+}
+
+.stability-sim__servers {
+  display: flex;
+  gap: 1rem;
+}
+
+.stability-sim__chart {
+  padding: 1rem;
+  background: #1e293b;
+}
+
+.stability-sim__chart-title {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+  margin-bottom: 0.5rem;
+}
+
+.stability-sim__metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.stability-sim__metric {
+  padding: 0.5rem;
+  background: #0f172a;
+  border-radius: 6px;
+  font-size: 0.6875rem;
+}
+
+.stability-sim__metric-value {
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.stability-sim__metric--fail .stability-sim__metric-value {
+  color: #f87171;
+}
+
+.stability-sim__metric--retry .stability-sim__metric-value {
+  color: #fbbf24;
+}
+
+.stability-sim__metric--ok .stability-sim__metric-value {
+  color: #4ade80;
+}
+
+.stability-sim__sparkline {
+  width: 100%;
+  height: 80px;
+}
+
+.stability-sim__note {
+  padding: 0.75rem 1rem;
+  font-size: 0.6875rem;
+  color: #94a3b8;
+  border-top: 1px solid #334155;
+  line-height: 1.5;
+}

@@ -6,3 +6,6 @@ export { KafkaVisualizer } from './kafka/KafkaVisualizer';
 export { RaftSimulator } from './raft/RaftSimulator';
 export { ReplicationViz } from './database/ReplicationViz';
 export { CapTheoremSimulator } from './cap/CapTheoremSimulator';
+export { PaxosSimulator } from './paxos/PaxosSimulator';
+export { StabilitySim } from './stability/StabilitySim';
+export { InterviewCanvas } from './interview/InterviewCanvas';

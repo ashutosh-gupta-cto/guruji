@@ -1,5 +1,5 @@
-import { AgentReplayDemo } from '../agent-replay/AgentReplayDemo';
+import { DiffusionExplainerEmbed } from '../diffusion/DiffusionExplainerEmbed';
 
 export default function DiffusionLab() {
-  return <AgentReplayDemo />;
+  return <DiffusionExplainerEmbed />;
 }

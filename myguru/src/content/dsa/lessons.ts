@@ -949,12 +949,360 @@ export const dpTableContent: LessonContent = {
   ],
 };
 
+export const quickSortContent: LessonContent = {
+  moduleId: 'quick-sort',
+  title: 'Quick Sort',
+  sections: [
+    {
+      heading: 'The core idea',
+      body:
+        'Quick sort picks a pivot, partitions the array so elements smaller than the pivot sit left and larger sit right, then recursively sorts each partition. In-place partitioning makes it memory-efficient in practice.',
+      bullets: [
+        'Divide-and-conquer — partition once, recurse on subarrays.',
+        'Pivot choice affects performance — last element, random, or median-of-three.',
+        'Unstable — swaps can reorder equal elements.',
+      ],
+    },
+    {
+      heading: 'How it works',
+      body:
+        'The partition scan uses two pointers: expand the "less than pivot" region by swapping out-of-place elements, then place the pivot in its final index. Recurse on [low..pivot−1] and [pivot+1..high].',
+      code: `function partition(arr: number[], low: number, high: number): number {
+  const pivot = arr[high];
+  let i = low - 1;
+  for (let j = low; j < high; j++) {
+    if (arr[j] < pivot) {
+      i++;
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+  }
+  [arr[i + 1], arr[high]] = [arr[high], arr[i + 1]];
+  return i + 1;
+}`,
+    },
+    {
+      heading: 'Complexity',
+      body:
+        'Balanced partitions halve the array each level → O(n log n). Sorted input with a naive last-element pivot degrades to O(n²).',
+      bullets: [
+        'Time — best/average O(n log n); worst O(n²) with bad pivots.',
+        'Space — O(log n) recursion stack on average.',
+        'Randomized pivot or introsort hybrids avoid worst-case paths in production.',
+      ],
+    },
+    {
+      heading: 'When to use it',
+      body:
+        'Default in-place sort for arrays when average-case speed matters and stability is not required. Libraries often fall back to insertion sort for tiny subarrays.',
+    },
+  ],
+  keyTakeaways: [
+    'Partition around a pivot, then recurse on left and right subarrays.',
+    'Average O(n log n) in-place; worst case O(n²) without careful pivot selection.',
+    'Unstable but cache-friendly — common choice for general-purpose array sorting.',
+  ],
+  sourceAttribution: [
+    {
+      repo: 'ChazWyllie/data-structure-visualizer',
+      url: 'https://github.com/ChazWyllie/data-structure-visualizer',
+    },
+  ],
+  quiz: [
+    {
+      question: 'After one partition step, where does the pivot end up?',
+      options: ['Always at index 0', 'At its final sorted position within the subarray', 'At the middle index', 'Removed from the array'],
+      correctIndex: 1,
+      explanation: 'Partition places the pivot so all smaller elements are left and all larger are right — its index is final for that subarray.',
+    },
+  ],
+};
+
+export const stackQueueContent: LessonContent = {
+  moduleId: 'stack-queue',
+  title: 'Stack & Queue',
+  sections: [
+    {
+      heading: 'Stack (LIFO)',
+      body:
+        'A stack adds and removes from the top only — Last-In-First-Out. Function call stacks, undo buffers, and DFS all use this discipline.',
+      code: `stack.push(x);  // O(1)
+const top = stack.pop();  // O(1)`,
+      bullets: ['Push adds to top', 'Pop removes from top', 'Overflow when capacity exceeded'],
+    },
+    {
+      heading: 'Queue (FIFO)',
+      body:
+        'A queue adds at the rear and removes from the front — First-In-First-Out. BFS, job schedulers, and print queues follow this pattern.',
+      code: `queue.enqueue(x);  // O(1)
+const front = queue.dequeue();  // O(1)`,
+      bullets: ['Enqueue at rear', 'Dequeue at front', 'Circular buffers avoid shift cost in array implementations'],
+    },
+    {
+      heading: 'Complexity',
+      body: 'Both support O(1) push/pop or enqueue/dequeue with proper implementations (array+pointer or linked nodes).',
+      bullets: ['Time — O(1) per operation', 'Space — O(n) for n stored elements'],
+    },
+  ],
+  keyTakeaways: [
+    'Stack = LIFO at the top; Queue = FIFO at front/rear.',
+    'BFS uses a queue; DFS uses a stack (or recursion).',
+    'Watch overflow/underflow on bounded implementations.',
+  ],
+  sourceAttribution: [
+    {
+      repo: 'ChazWyllie/data-structure-visualizer',
+      url: 'https://github.com/ChazWyllie/data-structure-visualizer',
+    },
+  ],
+  quiz: [
+    {
+      question: 'Which traversal does BFS use internally?',
+      options: ['Stack', 'Queue', 'Priority queue', 'Hash map'],
+      correctIndex: 1,
+      explanation: 'BFS processes nodes in FIFO order — the earliest discovered node is expanded first.',
+    },
+  ],
+};
+
+export const linkedListContent: LessonContent = {
+  moduleId: 'linked-list',
+  title: 'Singly Linked List',
+  sections: [
+    {
+      heading: 'The core idea',
+      body:
+        'A singly linked list stores values in nodes linked by next pointers. Insert/delete at known positions is O(1); finding a position requires O(n) traversal from head.',
+      bullets: ['Head pointer marks the list start', 'Last node points to null', 'No random access by index'],
+    },
+    {
+      heading: 'How it works',
+      body:
+        'Insert at tail: walk to the last node, set its next to the new node. Delete by value: walk while tracking previous, unlink the matching node.',
+      code: `function insertAtTail(head: ListNode | null, val: number): ListNode {
+  const node = new ListNode(val);
+  if (!head) return node;
+  let cur = head;
+  while (cur.next) cur = cur.next;
+  cur.next = node;
+  return head;
+}`,
+    },
+    {
+      heading: 'Complexity',
+      bullets: [
+        'Insert/delete at head — O(1)',
+        'Insert/delete at tail (without tail pointer) — O(n)',
+        'Search — O(n)',
+      ],
+      body: 'Traversal dominates when the tail is not cached.',
+    },
+  ],
+  keyTakeaways: [
+    'Nodes + next pointers; head is the entry point.',
+    'Dynamic size without reallocation — unlike dynamic arrays.',
+    'Tail insert needs traversal unless you keep a tail reference.',
+  ],
+  sourceAttribution: [
+    {
+      repo: 'ChazWyllie/data-structure-visualizer',
+      url: 'https://github.com/ChazWyllie/data-structure-visualizer',
+    },
+  ],
+  quiz: [
+    {
+      question: 'What is the time to insert at the tail without a tail pointer?',
+      options: ['O(1)', 'O(log n)', 'O(n)', 'O(n²)'],
+      correctIndex: 2,
+      explanation: 'You must traverse from head to the last node before linking the new node.',
+    },
+  ],
+};
+
+export const trieContent: LessonContent = {
+  moduleId: 'trie',
+  title: 'Trie (Prefix Tree)',
+  sections: [
+    {
+      heading: 'The core idea',
+      body:
+        'A trie stores strings character-by-character along root-to-leaf paths. Shared prefixes collapse into one path — efficient for autocomplete, spell-check, and prefix search.',
+      bullets: [
+        'Each edge represents one character',
+        'isEndOfWord marks complete dictionary entries',
+        'Children often stored as maps or arrays indexed by character',
+      ],
+    },
+    {
+      heading: 'How it works',
+      body:
+        'Insert walks from root, creating missing child nodes per character, then marks the terminal node. Search follows the same path and checks isEndOfWord at the end.',
+      code: `insert(word: string): void {
+  let node = root;
+  for (const ch of word) {
+    if (!node.children[ch]) node.children[ch] = new TrieNode();
+    node = node.children[ch];
+  }
+  node.isEndOfWord = true;
+}`,
+    },
+    {
+      heading: 'Complexity',
+      body: 'Operations are O(m) for word length m, independent of how many words are stored (unlike hash tables that degrade with collisions).',
+      bullets: ['Time — O(m) insert/search per word', 'Space — O(n·m) worst case with little prefix sharing'],
+    },
+  ],
+  keyTakeaways: [
+    'Prefix tree — shared prefixes share nodes.',
+    'O(m) per operation where m is word length.',
+    'Powers autocomplete: collect all words under a prefix subtree.',
+  ],
+  sourceAttribution: [
+    {
+      repo: 'ChazWyllie/data-structure-visualizer',
+      url: 'https://github.com/ChazWyllie/data-structure-visualizer',
+    },
+  ],
+  quiz: [
+    {
+      question: 'Why is trie search O(m) instead of O(n) over n stored words?',
+      options: [
+        'It hashes each word',
+        'It walks at most m character edges regardless of dictionary size',
+        'It sorts words first',
+        'It uses binary search on characters',
+      ],
+      correctIndex: 1,
+      explanation: 'Path length equals word length m; total dictionary size does not multiply traversal cost.',
+    },
+  ],
+};
+
+export const mstContent: LessonContent = {
+  moduleId: 'mst',
+  title: 'Minimum Spanning Tree',
+  sections: [
+    {
+      heading: 'The core idea',
+      body:
+        'A minimum spanning tree (MST) connects all vertices in a weighted undirected graph with minimum total edge weight and no cycles — exactly V−1 edges.',
+      bullets: [
+        'Greedy algorithms work because of the cut property',
+        'Used in network design, clustering, and approximation algorithms',
+        'MST is unique only when all edge weights are distinct',
+      ],
+    },
+    {
+      heading: "Prim's algorithm",
+      body:
+        'Grow a tree from a start node. Maintain a min-priority queue of edges crossing from the tree to outside vertices; repeatedly add the cheapest edge that reaches a new vertex.',
+      bullets: ['Best with dense graphs and adjacency matrices', 'Time O((V+E) log V) with a binary heap'],
+    },
+    {
+      heading: "Kruskal's algorithm",
+      body:
+        'Sort all edges by weight. Greedily add the next lightest edge that does not form a cycle, using Union-Find to test connectivity.',
+      bullets: ['Best with sparse graphs as edge lists', 'Time O(E log E) dominated by sorting'],
+    },
+  ],
+  keyTakeaways: [
+    'MST spans all nodes with minimum total weight and no cycles.',
+    "Prim grows from a seed node; Kruskal sorts edges globally.",
+    'Union-Find enables cycle detection in Kruskal.',
+  ],
+  sourceAttribution: [
+    {
+      repo: 'ChazWyllie/data-structure-visualizer',
+      url: 'https://github.com/ChazWyllie/data-structure-visualizer',
+    },
+  ],
+  quiz: [
+    {
+      question: 'How many edges does an MST of a connected graph with V vertices have?',
+      options: ['V', 'V − 1', 'V + 1', 'E − 1'],
+      correctIndex: 1,
+      explanation: 'A tree on V vertices always has exactly V−1 edges.',
+    },
+  ],
+};
+
+export const dijkstraContent: LessonContent = {
+  moduleId: 'dijkstra',
+  title: "Dijkstra's Algorithm",
+  sections: [
+    {
+      heading: 'The core idea',
+      body:
+        "Dijkstra's algorithm finds shortest paths from a single source in graphs with non-negative edge weights. It greedily settles the closest unvisited node and relaxes its outgoing edges.",
+      bullets: [
+        'Min-priority queue tracks tentative distances',
+        'Relaxation: if dist[u] + w(u,v) < dist[v], update dist[v]',
+        'Fails with negative edges — use Bellman-Ford instead',
+      ],
+    },
+    {
+      heading: 'How it works',
+      body:
+        'Initialize dist[source] = 0 and all others to ∞. Repeatedly extract the minimum-distance unvisited node, mark it settled, and relax each neighbor.',
+      code: `while (!pq.isEmpty()) {
+  const u = pq.extractMin();
+  if (visited.has(u)) continue;
+  visited.add(u);
+  for (const [v, w] of neighbors(u)) {
+    if (dist[u] + w < dist[v]) {
+      dist[v] = dist[u] + w;
+      pq.insert(v, dist[v]);
+    }
+  }
+}`,
+    },
+    {
+      heading: 'Complexity',
+      bullets: [
+        'Time — O((V+E) log V) with a binary heap',
+        'Space — O(V) for distances and priority queue',
+        'With non-negative weights, first settlement gives the final shortest distance',
+      ],
+      body: 'Each edge is relaxed at most once per extraction when using a proper priority queue.',
+    },
+  ],
+  keyTakeaways: [
+    'Single-source shortest paths on non-negative weighted graphs.',
+    'Greedy settlement + edge relaxation with a min-heap.',
+    'Foundation for GPS routing, network protocols (OSPF), and game pathfinding.',
+  ],
+  sourceAttribution: [
+    {
+      repo: 'ChazWyllie/data-structure-visualizer',
+      url: 'https://github.com/ChazWyllie/data-structure-visualizer',
+    },
+  ],
+  quiz: [
+    {
+      question: "Why doesn't Dijkstra work with negative edge weights?",
+      options: [
+        'The priority queue cannot store negatives',
+        'A settled node might later get a shorter path via a negative edge',
+        'It only works on trees',
+        'Negative weights make graphs disconnected',
+      ],
+      correctIndex: 1,
+      explanation: 'Once a node is extracted as minimum, Dijkstra assumes that distance is final — negative edges can violate that.',
+    },
+  ],
+};
+
 /** All DSA lab reading content keyed by moduleId. */
 export const dsaLessons: Record<string, LessonContent> = {
   'bubble-sort': bubbleSortContent,
   'merge-sort': mergeSortContent,
+  'quick-sort': quickSortContent,
   'binary-search': binarySearchContent,
   'graph-bfs': graphBfsContent,
+  dijkstra: dijkstraContent,
+  'stack-queue': stackQueueContent,
+  'linked-list': linkedListContent,
+  trie: trieContent,
+  mst: mstContent,
   heap: heapContent,
   bst: bstContent,
   'hash-table': hashTableContent,

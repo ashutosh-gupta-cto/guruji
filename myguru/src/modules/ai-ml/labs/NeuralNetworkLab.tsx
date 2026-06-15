@@ -1,5 +1,5 @@
-import { SemanticSearchDemo } from '../semantic-search/SemanticSearchDemo';
+import { EmbeddingAtlasEmbed } from '../embedding-atlas/EmbeddingAtlasEmbed';
 
 export default function NeuralNetworkLab() {
-  return <SemanticSearchDemo />;
+  return <EmbeddingAtlasEmbed />;
 }

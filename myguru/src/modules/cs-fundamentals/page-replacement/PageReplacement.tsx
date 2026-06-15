@@ -40,7 +40,7 @@ export default function PageReplacement() {
         <div>
           <span className="csf-label">Algorithm</span>
           <div className="pr-algo-btns">
-            {(['fifo', 'lru'] as const).map((a) => (
+            {(['fifo', 'lru', 'opt'] as const).map((a) => (
               <button
                 key={a}
                 type="button"

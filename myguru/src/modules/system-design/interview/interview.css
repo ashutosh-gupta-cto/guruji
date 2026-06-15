@@ -1,0 +1,203 @@
+.interview-canvas {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+  min-height: 520px;
+}
+
+.interview-canvas__header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: #fff;
+  border-bottom: 1px solid #e2e8f0;
+  align-items: center;
+}
+
+.interview-canvas__problem-select {
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.375rem 0.625rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.interview-canvas__difficulty {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+
+.interview-canvas__difficulty--Easy {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.interview-canvas__difficulty--Medium {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.interview-canvas__difficulty--Hard {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.interview-canvas__score {
+  margin-left: auto;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.interview-canvas__score--good {
+  color: #059669;
+}
+
+.interview-canvas__body {
+  display: grid;
+  grid-template-columns: 160px 1fr 220px;
+  flex: 1;
+  min-height: 420px;
+}
+
+@media (max-width: 900px) {
+  .interview-canvas__body {
+    grid-template-columns: 1fr;
+  }
+}
+
+.interview-canvas__palette {
+  padding: 0.75rem;
+  background: #fff;
+  border-right: 1px solid #e2e8f0;
+}
+
+.interview-canvas__palette-title {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 0.5rem;
+}
+
+.interview-canvas__palette-item {
+  padding: 0.375rem 0.5rem;
+  margin-bottom: 0.375rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: grab;
+  border: 1px solid transparent;
+}
+
+.interview-canvas__palette-item:active {
+  cursor: grabbing;
+}
+
+.interview-canvas__board {
+  position: relative;
+  background:
+    linear-gradient(#e2e8f0 1px, transparent 1px),
+    linear-gradient(90deg, #e2e8f0 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-color: #f1f5f9;
+  overflow: hidden;
+}
+
+.interview-canvas__edges {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.interview-canvas__edge {
+  stroke: #94a3b8;
+  stroke-width: 2;
+  fill: none;
+}
+
+.interview-canvas__node {
+  position: absolute;
+  width: 120px;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 2px solid;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-align: center;
+  cursor: move;
+  user-select: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.interview-canvas__node--selected {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.interview-canvas__checklist {
+  padding: 0.75rem;
+  background: #fff;
+  border-left: 1px solid #e2e8f0;
+  overflow-y: auto;
+}
+
+.interview-canvas__checklist-title {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 0.5rem;
+}
+
+.interview-canvas__check-item {
+  display: flex;
+  gap: 0.375rem;
+  align-items: flex-start;
+  font-size: 0.6875rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.interview-canvas__check-item--pass {
+  color: #059669;
+}
+
+.interview-canvas__check-item--fail {
+  color: #64748b;
+}
+
+.interview-canvas__desc {
+  padding: 0.75rem 1rem;
+  font-size: 0.75rem;
+  color: #475569;
+  border-top: 1px solid #e2e8f0;
+  line-height: 1.5;
+}
+
+.interview-canvas__hint {
+  padding: 0 1rem 0.75rem;
+  font-size: 0.6875rem;
+  color: #94a3b8;
+}
+
+.interview-canvas__btn {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.6875rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.interview-canvas__btn:hover {
+  background: #f1f5f9;
+}

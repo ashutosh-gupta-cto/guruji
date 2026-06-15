@@ -7,7 +7,7 @@
  * @see https://github.com/MUMEi-28/VirtualMemorySimulator
  */
 
-export type ReplacementAlgorithm = 'fifo' | 'lru';
+export type ReplacementAlgorithm = 'fifo' | 'lru' | 'opt';
 
 export interface FrameStep {
   stepIndex: number;
@@ -104,6 +104,51 @@ export function simulateLru(refString: number[], frameCount: number): Simulation
   return { steps, totalFaults };
 }
 
+export function simulateOpt(refString: number[], frameCount: number): SimulationResult {
+  const frameList: number[] = [];
+  let totalFaults = 0;
+  const steps: FrameStep[] = [];
+
+  for (let i = 0; i < refString.length; i++) {
+    const currentPage = refString[i];
+    const isPageFault = !frameList.includes(currentPage);
+
+    if (isPageFault) {
+      totalFaults++;
+      if (frameList.length < frameCount) {
+        frameList.push(currentPage);
+      } else {
+        let farthest = -1;
+        let victim = frameList[0];
+        for (const page of frameList) {
+          let nextUse = refString.length;
+          for (let j = i + 1; j < refString.length; j++) {
+            if (refString[j] === page) {
+              nextUse = j;
+              break;
+            }
+          }
+          if (nextUse > farthest) {
+            farthest = nextUse;
+            victim = page;
+          }
+        }
+        const indexToReplace = frameList.indexOf(victim);
+        frameList[indexToReplace] = currentPage;
+      }
+    }
+
+    steps.push({
+      stepIndex: i,
+      page: currentPage,
+      frames: padFrames(frameList, frameCount),
+      isPageFault,
+    });
+  }
+
+  return { steps, totalFaults };
+}
+
 function padFrames(frameList: number[], frameCount: number): (number | null)[] {
   const result: (number | null)[] = [...frameList];
   while (result.length < frameCount) result.push(null);
@@ -116,5 +161,23 @@ export function runSimulation(
   frameCount: number,
 ): SimulationResult {
   if (algorithm === 'fifo') return simulateFifo(refString, frameCount);
+  if (algorithm === 'opt') return simulateOpt(refString, frameCount);
   return simulateLru(refString, frameCount);
+}
+
+export interface AddressTranslation {
+  virtualAddress: number;
+  pageSize: number;
+  pageNumber: number;
+  offset: number;
+}
+
+export function translateAddress(virtualAddress: number, pageSize: number): AddressTranslation {
+  const size = Math.max(1, pageSize);
+  return {
+    virtualAddress,
+    pageSize: size,
+    pageNumber: Math.floor(virtualAddress / size),
+    offset: virtualAddress % size,
+  };
 }

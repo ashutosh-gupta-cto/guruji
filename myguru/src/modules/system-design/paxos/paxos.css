@@ -1,0 +1,84 @@
+.paxos-sim {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  overflow: hidden;
+  color: #e2e8f0;
+}
+
+.paxos-sim__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: #1e293b;
+  border-bottom: 1px solid #334155;
+  align-items: center;
+}
+
+.paxos-sim__btn {
+  padding: 0.375rem 0.75rem;
+  background: #334155;
+  color: #f8fafc;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.paxos-sim__btn:hover {
+  background: #475569;
+}
+
+.paxos-sim__btn--primary {
+  background: #2563eb;
+}
+
+.paxos-sim__btn--primary:hover {
+  background: #1d4ed8;
+}
+
+.paxos-sim__phase {
+  margin-left: auto;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.625rem;
+  border-radius: 999px;
+  background: #334155;
+}
+
+.paxos-sim__canvas-wrap {
+  position: relative;
+}
+
+.paxos-sim__canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.paxos-sim__log {
+  padding: 0.75rem 1rem;
+  background: #1e293b;
+  border-top: 1px solid #334155;
+  max-height: 120px;
+  overflow-y: auto;
+  font-family: ui-monospace, monospace;
+  font-size: 0.6875rem;
+  line-height: 1.5;
+  color: #94a3b8;
+}
+
+.paxos-sim__log-entry {
+  margin: 0;
+}
+
+.paxos-sim__stats {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.6875rem;
+  color: #64748b;
+  border-top: 1px solid #334155;
+}

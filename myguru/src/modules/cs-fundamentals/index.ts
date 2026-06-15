@@ -8,3 +8,7 @@ export { default as CipherDemo } from './crypto/CipherDemo';
 export { default as CpuSchedulerViz } from './os-scheduler/CpuSchedulerViz';
 export { default as RoutingViz } from './routing/RoutingViz';
 export { default as RegexAutomataViz } from './automata/RegexAutomataViz';
+export { GitGameEmbed } from './git-game/GitGameEmbed';
+export { CpuArchEmbed } from './cpu-arch/CpuArchEmbed';
+export { default as CipherMuseum } from './cipher-museum/CipherMuseum';
+export { OsSimulatorEmbed } from './os-simulator/OsSimulatorEmbed';

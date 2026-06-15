@@ -2,8 +2,14 @@ import type { ComponentType } from 'react';
 
 import BubbleSortLab from './dsa/labs/BubbleSortLab';
 import MergeSortLab from './dsa/labs/MergeSortLab';
+import QuickSortLab from './dsa/labs/QuickSortLab';
 import BinarySearchLab from './dsa/labs/BinarySearchLab';
 import GraphBfsLab from './dsa/labs/GraphBfsLab';
+import DijkstraLab from './dsa/labs/DijkstraLab';
+import StackQueueLab from './dsa/labs/StackQueueLab';
+import LinkedListLab from './dsa/labs/LinkedListLab';
+import TrieLab from './dsa/labs/TrieLab';
+import MstLab from './dsa/labs/MstLab';
 import HeapLab from './dsa/labs/HeapLab';
 import BstLab from './dsa/labs/BstLab';
 import HashTableLab from './dsa/labs/HashTableLab';
@@ -18,10 +24,15 @@ import KafkaLab from './system-design/labs/KafkaLab';
 import RaftLab from './system-design/labs/RaftLab';
 import DatabaseInternalsLab from './system-design/labs/DatabaseInternalsLab';
 import CapTheoremLab from './system-design/labs/CapTheoremLab';
+import PaxosLab from './system-design/labs/PaxosLab';
+import StabilityLab from './system-design/labs/StabilityLab';
+import InterviewSimulatorLab from './system-design/labs/InterviewSimulatorLab';
 import NeuralNetworkLab from './ai-ml/labs/NeuralNetworkLab';
 import GradientDescentLab from './ai-ml/labs/GradientDescentLab';
 import AttentionLab from './ai-ml/labs/AttentionLab';
 import DiffusionLab from './ai-ml/labs/DiffusionLab';
+import AgentReplayLab from './ai-ml/labs/AgentReplayLab';
+import GraphRagLab from './ai-ml/labs/GraphRagLab';
 import TransformerLab from './ai-ml/labs/TransformerLab';
 import NeuralPlaygroundLab from './ai-ml/labs/NeuralPlaygroundLab';
 import CnnExplainerLab from './ai-ml/labs/CnnExplainerLab';
@@ -36,6 +47,10 @@ import CryptoLab from './cs-fundamentals/labs/CryptoLab';
 import OsSchedulerLab from './cs-fundamentals/labs/OsSchedulerLab';
 import RoutingLab from './cs-fundamentals/labs/RoutingLab';
 import AutomataLab from './cs-fundamentals/labs/AutomataLab';
+import GitGameLab from './cs-fundamentals/labs/GitGameLab';
+import CpuArchLab from './cs-fundamentals/labs/CpuArchLab';
+import CipherMuseumLab from './cs-fundamentals/labs/CipherMuseumLab';
+import OsSimulatorLab from './cs-fundamentals/labs/OsSimulatorLab';
 
 export interface LabModuleEntry {
   id: string;
@@ -46,8 +61,14 @@ export interface LabModuleEntry {
 export const labRegistry: Record<string, LabModuleEntry> = {
   'bubble-sort': { id: 'bubble-sort', title: 'Bubble Sort', component: BubbleSortLab },
   'merge-sort': { id: 'merge-sort', title: 'Merge Sort', component: MergeSortLab },
+  'quick-sort': { id: 'quick-sort', title: 'Quick Sort', component: QuickSortLab },
   'binary-search': { id: 'binary-search', title: 'Binary Search', component: BinarySearchLab },
   'graph-bfs': { id: 'graph-bfs', title: 'Breadth-First Search', component: GraphBfsLab },
+  dijkstra: { id: 'dijkstra', title: "Dijkstra's Algorithm", component: DijkstraLab },
+  'stack-queue': { id: 'stack-queue', title: 'Stack & Queue', component: StackQueueLab },
+  'linked-list': { id: 'linked-list', title: 'Singly Linked List', component: LinkedListLab },
+  trie: { id: 'trie', title: 'Trie (Prefix Tree)', component: TrieLab },
+  mst: { id: 'mst', title: 'Minimum Spanning Tree', component: MstLab },
   heap: { id: 'heap', title: 'Heap / Priority Queue', component: HeapLab },
   bst: { id: 'bst', title: 'Binary Search Tree', component: BstLab },
   'hash-table': { id: 'hash-table', title: 'Hash Table', component: HashTableLab },
@@ -70,6 +91,13 @@ export const labRegistry: Record<string, LabModuleEntry> = {
     component: DatabaseInternalsLab,
   },
   'cap-theorem': { id: 'cap-theorem', title: 'CAP Theorem', component: CapTheoremLab },
+  paxos: { id: 'paxos', title: 'Paxos Consensus', component: PaxosLab },
+  stability: { id: 'stability', title: 'Metastable Failures', component: StabilityLab },
+  'interview-simulator': {
+    id: 'interview-simulator',
+    title: 'Interview Simulator',
+    component: InterviewSimulatorLab,
+  },
   'neural-network': { id: 'neural-network', title: 'Neural Networks', component: NeuralNetworkLab },
   'gradient-descent': {
     id: 'gradient-descent',
@@ -78,6 +106,12 @@ export const labRegistry: Record<string, LabModuleEntry> = {
   },
   attention: { id: 'attention', title: 'Attention Mechanism', component: AttentionLab },
   diffusion: { id: 'diffusion', title: 'Diffusion Models', component: DiffusionLab },
+  'agent-replay': { id: 'agent-replay', title: 'Agent Trace Replay', component: AgentReplayLab },
+  'graphrag-hybrid': {
+    id: 'graphrag-hybrid',
+    title: 'GraphRAG & Hybrid Retrieval',
+    component: GraphRagLab,
+  },
   transformer: { id: 'transformer', title: 'Transformer Architecture', component: TransformerLab },
   'neural-playground': {
     id: 'neural-playground',
@@ -96,6 +130,10 @@ export const labRegistry: Record<string, LabModuleEntry> = {
   'os-scheduler': { id: 'os-scheduler', title: 'CPU Scheduling', component: OsSchedulerLab },
   routing: { id: 'routing', title: 'Network Routing', component: RoutingLab },
   automata: { id: 'automata', title: 'Regex & Automata', component: AutomataLab },
+  'git-game': { id: 'git-game', title: 'Git Branching Game', component: GitGameLab },
+  'cpu-arch': { id: 'cpu-arch', title: 'CPU Architecture', component: CpuArchLab },
+  'cipher-museum': { id: 'cipher-museum', title: 'Cipher Museum', component: CipherMuseumLab },
+  'os-simulator': { id: 'os-simulator', title: 'OS Memory Simulator', component: OsSimulatorLab },
 };
 
 export function getLabModule(moduleId: string): LabModuleEntry | undefined {
